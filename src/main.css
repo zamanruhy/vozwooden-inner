@@ -1,0 +1,116 @@
+.woocommerce-products-header {
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 32px;
+  margin-bottom: 34px;
+
+  @screen max-lg {
+    margin-bottom: 20px;
+  }
+
+  @screen max-sm {
+    gap: 8px 24px;
+    margin-bottom: 24px;
+  }
+
+  .woocommerce-products-header__title {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    @screen max-sm {
+      font-size: 20px;
+    }
+  }
+
+  .site-button {
+    @screen max-sm {
+      min-height: 38px;
+      padding: 4px 12px;
+    }
+
+    svg {
+      @screen max-md {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-button {
+  &_quaternary {
+    color: #030a1b;
+    background-color: transparent;
+    border: 1px solid #030a1b;
+
+    &:hover {
+      background-color: #ffcc48;
+      border-color: #ffcc48;
+    }
+  }
+  &_quinary {
+    color: #030a1b;
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+
+    &:hover {
+      border-color: #030a1b;
+    }
+  }
+  &_senary {
+    background-color: #ffcc48;
+    border: 1px solid #ffcc48;
+
+    &:hover {
+      background-color: #ffffff;
+      border-color: #030a1b;
+    }
+  }
+
+  // quaternary, quinary, senary, septenary, octonary, nonary, denary
+
+  &_pill {
+    font-size: 13px;
+    font-weight: 400;
+    color: #030a1b;
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    height: 36px;
+    padding: 4px 12px;
+    border-radius: 36px;
+
+    @screen max-md {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: rgba(3, 10, 27, 0.5);
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &_lg {
+    min-height: 47px;
+    padding: 8px 20px;
+  }
+  &_xl {
+    min-height: 50px;
+    padding: 8px 20px;
+  }
+  &_2xl {
+    min-height: 56px;
+    padding: 8px 28px;
+    font-size: 16px;
+  }
+
+  svg {
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+}
+
+@tailwind utilities;

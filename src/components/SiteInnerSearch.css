@@ -1,0 +1,139 @@
+.site-inner-search {
+  margin-left: 12px;
+  min-width: 0;
+
+  &__form {
+    position: relative;
+    width: 308px;
+    max-width: 100%;
+    height: 36px;
+
+    @screen max-md {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      display: none;
+    }
+  }
+  &__input {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 100px;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    padding-left: 16px;
+    padding-right: 34px;
+    font-family: inherit;
+
+    @screen max-md {
+      padding-left: 42px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: #b4b4b4;
+    }
+  }
+  &__button {
+    box-sizing: border-box;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    transition: $transition;
+    transition-property: color, background-color;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    background-color: transparent;
+  }
+  @define-mixin active-button {
+    color: #000000;
+  }
+  &__input:hover ~ &__button,
+  &__input:focus ~ &__button,
+  &__button:hover {
+    @mixin active-button;
+  }
+  // &__button:focus-visible {
+  //   @mixin active-button;
+  // }
+  &__input:not(:placeholder-shown) ~ &__button {
+    @mixin active-button;
+  }
+  &__button-icon {
+    height: 16px;
+    fill: currentColor;
+  }
+
+  &__close {
+    width: 42px;
+    height: 34px;
+    border-radius: 100px;
+    transition: $transition;
+    transition-property: color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    background-color: transparent;
+
+    @screen md {
+      display: none;
+    }
+  }
+  @define-mixin active-close {
+    color: $color-black;
+  }
+  // &__input:hover ~ &__close,
+  // &__input:focus ~ &__close,
+  &__close:hover {
+    @mixin active-close;
+  }
+  &__close:focus-visible {
+    @mixin active-close;
+  }
+  // &__input:not(:placeholder-shown) ~ &__close {
+  //   @mixin active-close;
+  // }
+  &__close-icon {
+    height: 14px;
+    fill: currentColor;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 36px;
+    border: 1px solid #d8d8d8;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: #000000;
+    cursor: pointer;
+
+    @screen md {
+      display: none;
+    }
+  }
+  &__trigger-icon {
+    height: 16px;
+    fill: currentColor;
+  }
+}

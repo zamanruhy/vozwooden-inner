@@ -1,0 +1,56 @@
+.site-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 34px;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 34px;
+  white-space: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @screen max-md {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  > *:not(:last-child) {
+    margin-right: 20px;
+
+    @screen max-md {
+      margin-right: 12px;
+    }
+  }
+
+  &__date {
+  }
+  &__share {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: auto;
+
+    @screen max-md {
+      padding: 0;
+      width: 36px;
+    }
+
+    svg {
+      @screen max-md {
+        position: relative;
+        left: -1px;
+      }
+    }
+    span {
+      margin-left: 10px;
+
+      @screen max-md {
+        display: none;
+      }
+    }
+  }
+}

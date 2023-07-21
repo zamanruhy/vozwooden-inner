@@ -1,0 +1,132 @@
+.site-search {
+  position: relative;
+  width: 314px;
+  height: 38px;
+  margin-right: 30px;
+  display: none;
+
+  @media not all and (min-width: 969px) {
+    position: absolute;
+    height: auto;
+    width: auto;
+    margin-right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media (min-width: 969px) {
+    display: block !important;
+  }
+
+  &_open {
+    display: block;
+  }
+
+  &__input {
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+    font-size: 13px;
+    padding-left: 16px;
+    padding-right: 48px;
+    font-family: inherit;
+
+    @media not all and (min-width: 969px) {
+      border-color: transparent;
+      padding-left: 42px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+      color: #b4b4b4;
+    }
+  }
+  &__button {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    transition: $transition;
+    transition-property: color, background-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    background-color: transparent;
+
+    @media not all and (min-width: 969px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  @define-mixin active-button {
+    background-color: $color-yellow;
+    color: #000000;
+  }
+  &__input:hover ~ &__button,
+  &__input:focus ~ &__button,
+  &__button:hover {
+    @mixin active-button;
+  }
+  &__button:focus-visible {
+    @mixin active-button;
+  }
+  &__input:not(:placeholder-shown) ~ &__button {
+    @mixin active-button;
+  }
+  &__button-icon {
+    height: 16px;
+    fill: currentColor;
+  }
+
+  &__close {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    transition: $transition;
+    transition-property: color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b4b4b4;
+    background-color: transparent;
+
+    @media (min-width: 969px) {
+      display: none;
+    }
+  }
+  @define-mixin active-close {
+    color: $color-black;
+  }
+  &__input:hover ~ &__close,
+  &__input:focus ~ &__close,
+  &__close:hover {
+    @mixin active-close;
+  }
+  &__close:focus-visible {
+    @mixin active-close;
+  }
+  &__input:not(:placeholder-shown) ~ &__close {
+    @mixin active-close;
+  }
+  &__close-icon {
+    height: 14px;
+    fill: currentColor;
+  }
+}
