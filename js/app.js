@@ -10,3 +10,6 @@ const SiteTestimonials = "";
 const SiteRelated = "";
 const SiteNewsArticle = "";
 const SiteAbout = "";
+const SiteCheckbox = "";
+const SiteInput = "";
+const SiteFeedback = "";
