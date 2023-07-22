@@ -9,6 +9,7 @@ import personImg from '../images/about-person.jpg?jpg'
 
 import './SiteAbout.css'
 import SiteButton from './SiteButton'
+import SiteFeedback from './SiteFeedback'
 
 export default function SiteAbout() {
   return (
@@ -121,6 +122,8 @@ export default function SiteAbout() {
           Посмотреть вакансии
         </SiteButton>
       </div>
+
+      <SiteFeedback />
     </div>
   )
 }

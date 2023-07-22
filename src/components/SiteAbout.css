@@ -200,8 +200,6 @@
   }
   &__join-button {
     white-space: nowrap;
-    padding-left: 44px;
-    padding-right: 44px;
 
     @screen max-md {
       padding-left: 30px;

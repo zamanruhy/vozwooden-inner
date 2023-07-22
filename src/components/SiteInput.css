@@ -1,0 +1,36 @@
+.site-input {
+  box-sizing: border-box;
+  display: block;
+  min-height: 44px;
+  padding: 8px 18px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  border-radius: 4px;
+
+  &::placeholder {
+    opacity: 1;
+    color: inherit;
+  }
+
+  textarea& {
+    height: 112px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    resize: vertical;
+  }
+
+  &_ghost {
+    border: 1px solid #ffffff;
+    background-color: #030a1b;
+    color: #ffffff;
+  }
+}
