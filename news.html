@@ -1512,10 +1512,10 @@
             <h1 class="woocommerce-products-header__title page-title">Новости VozWooden</h1>
             <button
               data-hk="0-0-0-0-3-0-0-0-0-0"
-              class="site-button site-button_quaternary site-button_xl"
+              class="site-button max-md:site-button_md site-button_quaternary site-button_xl"
               type="button"
             >
-              <svg viewBox="0 0 18 18" fill="currentColor" style="margin-right: 10px">
+              <svg viewBox="0 0 18 18" fill="currentColor" class="mr-2.5 max-md:hidden">
                 <path
                   d="M17.44 2.25H.56a.56.56 0 0 0-.56.56v11.81a.56.56 0 0 0 .56.57h16.88a.56.56 0 0 0 .56-.56V2.8a.56.56 0 0 0-.56-.56ZM12.9 9.31a.56.56 0 0 0-.8.79l3.97 3.96H1.92l3.96-3.96a.56.56 0 0 0-.8-.8l-3.96 3.97V4.1l7.5 6.95a.56.56 0 0 0 .76 0l7.5-6.95v9.17L12.9 9.3ZM2 3.37h14l-7 6.5-7-6.5Z"
                 ></path></svg
@@ -1525,11 +1525,39 @@
           <div class="site-summary">
             <div class="site-summary__inner">
               <nav class="site-nav-tabs">
-                <ul>
-                  <li><a href="#" class="active">Все новости</a></li>
-                  <li><a href="#" class="">Конкурс</a></li>
-                  <li><a href="#" class="">Новинка</a></li>
-                  <li><a href="#" class="">Соревнование</a></li>
+                <ul class="site-nav-tabs__list">
+                  <li class="site-nav-tabs__item">
+                    <a
+                      data-hk="0-0-0-0-3-0-0-1-0-0-0-0"
+                      class="site-button site-nav-tabs__tab site-button_tab active"
+                      href="#"
+                      >Все новости</a
+                    >
+                  </li>
+                  <li class="site-nav-tabs__item">
+                    <a
+                      data-hk="0-0-0-0-3-0-0-1-0-1-0-0"
+                      class="site-button site-nav-tabs__tab site-button_tab"
+                      href="#"
+                      >Конкурс</a
+                    >
+                  </li>
+                  <li class="site-nav-tabs__item">
+                    <a
+                      data-hk="0-0-0-0-3-0-0-1-0-2-0-0"
+                      class="site-button site-nav-tabs__tab site-button_tab"
+                      href="#"
+                      >Новинка</a
+                    >
+                  </li>
+                  <li class="site-nav-tabs__item">
+                    <a
+                      data-hk="0-0-0-0-3-0-0-1-0-3-0-0"
+                      class="site-button site-nav-tabs__tab site-button_tab"
+                      href="#"
+                      >Соревнование</a
+                    >
+                  </li>
                 </ul>
               </nav>
               <div class="site-inner-search">
@@ -1554,7 +1582,11 @@
                     </svg>
                   </button>
                 </form>
-                <button class="site-inner-search__trigger" type="button">
+                <button
+                  data-hk="0-0-0-0-3-0-0-1-1-2-0-0"
+                  class="site-button site-inner-search__trigger site-button_pill site-button_icon"
+                  type="button"
+                >
                   <svg viewBox="0 0 16 16" class="site-inner-search__trigger-icon">
                     <path
                       d="M6.44 12.87c1.43 0 2.82-.47 3.95-1.35l4.25 4.25a.8.8 0 0 0 1.14-1.13l-4.26-4.25a6.44 6.44 0 1 0-5.08 2.48ZM3.02 3.02a4.84 4.84 0 1 1 0 6.84 4.82 4.82 0 0 1 0-6.84Z"
@@ -1567,42 +1599,128 @@
           <div class="site-news">
             <div class="site-news__wrapper">
               <div class="site-news__items">
-                <a href="#" class="site-news__item"
-                  ><img src="img/news-item-1.jpg" width="760" height="580" alt="#" /></a
-                ><a href="#" class="site-news__item"
-                  ><img src="img/news-item-2.jpg" width="760" height="960" alt="#" /></a
-                ><a href="#" class="site-news__item"
-                  ><img src="img/news-item-3.jpg" width="760" height="580" alt="#" /></a
-                ><a href="#" class="site-news__item"
-                  ><img src="img/news-item-4.jpg" width="760" height="960" alt="#" /></a
-                ><a href="#" class="site-news__item"
-                  ><img src="img/news-item-5.jpg" width="760" height="580" alt="#" /></a
-                ><a href="#" class="site-news__item"
-                  ><img src="img/news-item-6.jpg" width="760" height="960" alt="#"
-                /></a>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-1.jpg" width="760" height="580" alt="#" />
+                </div>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-2.jpg" width="760" height="960" alt="#" />
+                </div>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-3.jpg" width="760" height="580" alt="#" />
+                </div>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-4.jpg" width="760" height="960" alt="#" />
+                </div>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-5.jpg" width="760" height="580" alt="#" />
+                </div>
+                <div class="site-news__item">
+                  <div class="site-news__item-details">
+                    <a href="news-article" class="site-news__item-button">Новость</a>
+                    <div class="site-news__item-caption">
+                      <p>
+                        Текст новости в одну, две или три строки с кнопкой перехода в полную новость
+                      </p>
+                      <time>23 мая 2023</time>
+                    </div>
+                  </div>
+                  <img src="img/news-item-6.jpg" width="760" height="960" alt="#" />
+                </div>
               </div>
             </div>
             <div class="site-news__pager">
               <a
                 data-hk="0-0-0-0-3-0-0-2-6-0-0"
-                class="site-button site-news__more site-button_quinary site-button_lg"
+                class="site-button site-news__more max-md:site-button_md max-md:site-button_septenary site-button_quaternary site-button_lg"
                 href="#"
                 >Показать еще</a
               >
+              <div class="site-news__pagination max-md:hidden">
+                <a
+                  data-hk="0-0-0-0-3-0-0-2-7-0-0"
+                  class="site-button site-button_icon site-news__pagination-item site-button_quinary site-button_lg current"
+                  href="#"
+                  >1</a
+                ><a
+                  data-hk="0-0-0-0-3-0-0-2-8-0-0"
+                  class="site-button site-button_icon site-news__pagination-item site-button_quinary site-button_lg"
+                  href="#"
+                  >2</a
+                ><a
+                  data-hk="0-0-0-0-3-0-0-2-9-0-0"
+                  class="site-button site-button_icon site-news__pagination-item site-button_quinary site-button_lg"
+                  href="#"
+                  >3</a
+                ><a
+                  data-hk="0-0-0-0-3-0-0-2-10-0-0"
+                  class="site-button site-button_icon site-news__pagination-item site-button_quinary site-button_lg"
+                  href="#"
+                  ><svg viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M15.53 9.03c.3-.3.3-.77 0-1.06L10.76 3.2A.75.75 0 0 0 9.7 4.26l4.24 4.24-4.24 4.24a.75.75 0 0 0 1.06 1.06l4.77-4.77ZM1 9.25h14v-1.5H1v1.5Z"
+                      fill="#000"
+                    ></path></svg
+                ></a>
+              </div>
             </div>
             <div class="site-subs">
               <div class="site-subs__inner">
                 <div class="site-subs__caption">
                   <h2 class="site-subs__title">Подпишись <br />будь в курсе новостей!</h2>
                   <button
-                    data-hk="0-0-0-0-3-0-0-2-7-0-0-0"
+                    data-hk="0-0-0-0-3-0-0-2-11-0-0-0"
                     class="site-button site-subs__button site-button_primary"
                     type="button"
                   >
                     Подписаться
                   </button>
                 </div>
-                <img src="img/news-subs.jpg" width="2912" height="776" alt="" />
+                <img src="img/news-subs.jpg" width="2912" height="776" alt="" loading="lazy" />
               </div>
             </div>
           </div>
