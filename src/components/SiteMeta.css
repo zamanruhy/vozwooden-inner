@@ -31,13 +31,5 @@
   }
   &__share {
     margin-left: auto;
-
-    // span {
-    //   margin-left: 10px;
-
-    //   @screen max-md {
-    //     display: none;
-    //   }
-    // }
   }
 }

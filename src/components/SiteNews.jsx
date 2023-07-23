@@ -64,7 +64,8 @@ export default function SiteNews() {
               href="#"
               variant="quinary"
               size="lg"
-              className="site-button_icon site-news__pagination-item"
+              icon
+              className="site-news__pagination-item"
               classList={{ current: num === 1 }}
             >
               {Number.isInteger(num) ? num : <NextIcon />}

@@ -14,3 +14,21 @@
     $search.removeClass('site-inner-search_open')
   })
 })()
+
+// Share
+;(function () {
+  var $ = window.jQuery
+  var $shares = $('.site-meta__share, .site-share__button')
+
+  $shares.on('click', async () => {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: document.querySelector("meta[name='description']").content,
+        url: window.location.href
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  })
+})()

@@ -1,4 +1,5 @@
 import Image from './Image'
+import SiteButton from './SiteButton'
 
 import news1Img from '../images/news-item-1.jpg?jpg'
 import news2Img from '../images/news-item-2.jpg?jpg'
@@ -36,12 +37,25 @@ export default function SiteRelated() {
           </div>
         </div>
         <div className="site-related__nav">
-          <button className="site-related__prev" type="button">
+          <SiteButton
+            icon
+            type="button"
+            variant="quinary"
+            size="lg"
+            className="site-related__prev"
+          >
             <PrevIcon />
-          </button>
-          <button className="site-related__next" type="button">
+          </SiteButton>
+
+          <SiteButton
+            icon
+            type="button"
+            variant="quinary"
+            size="lg"
+            className="site-related__next"
+          >
             <NextIcon />
-          </button>
+          </SiteButton>
         </div>
       </div>
     </div>

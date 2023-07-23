@@ -1,0 +1,44 @@
+.site-share {
+  display: flex;
+  align-items: center;
+
+  &__items {
+    display: flex;
+
+    @screen max-md {
+      display: none;
+    }
+  }
+  &__item {
+    border-radius: 50%;
+
+    &:hover {
+      color: var(--share-color);
+    }
+
+    svg {
+      color: inherit;
+    }
+
+    & + & {
+      margin-left: 16px;
+    }
+  }
+  &__label {
+    margin-left: 16px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+
+    @screen max-md {
+      display: none;
+    }
+  }
+
+  &__button {
+    @screen md {
+      display: none;
+    }
+  }
+}

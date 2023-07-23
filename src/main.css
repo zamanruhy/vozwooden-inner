@@ -112,7 +112,7 @@
   }
 
   &_lg {
-    min-height: 47px;
+    min-height: 48px; // 47px
     padding: 8px 20px;
   }
   &_xl {

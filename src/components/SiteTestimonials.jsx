@@ -1,3 +1,6 @@
+import SiteShare from './SiteShare'
+import SiteButton from './SiteButton'
+
 import PrevIcon from '../icons/prev.svg?component'
 import NextIcon from '../icons/next.svg?component'
 
@@ -39,18 +42,32 @@ export default function SiteTestimonials() {
         </div>
       </div>
       <div className="site-testimonials__actions">
+        <SiteShare />
+
         <div className="site-testimonials__nav">
           <div className="site-testimonials__nav-left">
-            <button className="site-testimonials__prev" type="button">
+            <SiteButton
+              icon
+              type="button"
+              variant="quinary"
+              size="lg"
+              className="site-testimonials__prev"
+            >
               <PrevIcon />
-            </button>
+            </SiteButton>
             <span>Предыдущая</span>
           </div>
           <div className="site-testimonials__nav-right">
             <span>Следующая</span>
-            <button className="site-testimonials__next" type="button">
+            <SiteButton
+              icon
+              type="button"
+              variant="quinary"
+              size="lg"
+              className="site-testimonials__next"
+            >
               <NextIcon />
-            </button>
+            </SiteButton>
           </div>
         </div>
       </div>

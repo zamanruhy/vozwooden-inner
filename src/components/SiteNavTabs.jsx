@@ -19,7 +19,7 @@ export default function SiteNavTabs() {
               href="#"
               variant="tab"
               className="site-nav-tabs__tab"
-              classList={{ active: i === 0 }}
+              classList={{ active: i === 2 }}
             >
               {name}
             </SiteButton>
