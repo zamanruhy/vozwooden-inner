@@ -1,5 +1,6 @@
 const main = "";
 const SiteSubs = "";
+const SiteNewsItem = "";
 const SiteNews = "";
 const SiteNavTabs = "";
 const SiteInnerSearch = "";
