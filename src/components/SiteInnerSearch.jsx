@@ -1,3 +1,5 @@
+import SiteButton from './SiteButton'
+
 import MagIcon from '../icons/mag.svg?component'
 import CloseIcon from '../icons/close.svg?component'
 
@@ -21,9 +23,14 @@ export default function SiteInnerSearch() {
           <MagIcon className="site-inner-search__button-icon" />
         </button>
       </form>
-      <button className="site-inner-search__trigger" type="button">
+      <SiteButton
+        type="button"
+        variant="pill"
+        icon
+        className="site-inner-search__trigger"
+      >
         <MagIcon className="site-inner-search__trigger-icon" />
-      </button>
+      </SiteButton>
     </div>
   )
 }

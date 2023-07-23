@@ -22,7 +22,7 @@ export default function SiteSubs() {
             Подписаться
           </SiteButton>
         </div>
-        <Image src={subsImg} alt="" />
+        <Image src={subsImg} alt="" loading="lazy" />
       </div>
     </div>
   )

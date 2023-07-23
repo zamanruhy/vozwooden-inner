@@ -1,10 +1,4 @@
-$condition: (
-    width: 1cqw
-  )
-  and
-  (
-    display: grid
-  );
+// $item-bp: 340px;
 
 .site-news {
   &__wrapper {
@@ -13,46 +7,31 @@ $condition: (
     @screen max-md {
       margin-bottom: 20px;
     }
-
-    @screen sm {
-      @supports $condition {
-        container-type: inline-size;
-      }
-    }
   }
   &__items {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    margin: -10px;
-
-    @screen md {
-      margin: -12px;
-    }
+    gap: 20px;
 
     @screen sm {
-      @supports $condition {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        column-gap: 2.47cqw;
-        margin: 0 0 -2.47cqw;
-        grid-auto-rows: 0.5cqw;
-        grid-auto-flow: dense;
-      }
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @screen md {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0 min(2.5vw, 30px);
+      margin: 0 0 calc(min(2.5vw, 30px) * -1);
+      grid-auto-rows: min(0.8333vw, 10px);
+      grid-auto-flow: dense;
     }
   }
   &__item {
+    // container-type: inline-size;
+    // container-name: item;
+    position: relative;
     display: block;
     position: relative;
-    width: calc(100% - 10px * 2);
-    margin: 10px;
-
-    @screen sm {
-      width: calc(100% / 3 - 12px * 2);
-    }
-
-    @screen md {
-      margin: 12px;
-    }
+    overflow: hidden;
 
     &::before {
       content: "";
@@ -60,28 +39,26 @@ $condition: (
       padding-bottom: 76.4%;
     }
 
-    @screen sm {
-      @supports $condition {
-        grid-row: span 53;
-        margin: 0 0 2.47cqw;
-        width: auto;
+    @screen md {
+      grid-row: span 29;
+      margin: 0 0 min(2.5vw, 30px);
+      width: auto;
 
-        &:nth-child(even) {
-          grid-row: span 85;
-        }
-        &:nth-child(3n + 1) {
-          grid-column: 1;
-        }
-        &:nth-child(3n + 2) {
-          grid-column: 2;
-        }
-        &:nth-child(3n) {
-          grid-column: 3;
-        }
+      &:nth-child(even) {
+        grid-row: span 48;
+      }
+      &:nth-child(3n + 1) {
+        grid-column: 1;
+      }
+      &:nth-child(3n + 2) {
+        grid-column: 2;
+      }
+      &:nth-child(3n) {
+        grid-column: 3;
+      }
 
-        &::before {
-          display: none;
-        }
+      &::before {
+        display: none;
       }
     }
 
@@ -93,6 +70,82 @@ $condition: (
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+  }
+  &__item-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #030a1b;
+    z-index: 1;
+    padding: 50px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: $transition;
+    transition-property: opacity, transform, visibility;
+    opacity: 0;
+    // transform: translateY(50px);
+    // transform: translateY(-10px) scale(1.05);
+    visibility: hidden;
+
+    // display: none;
+
+    // @container item (max-width: $item-bp) {
+    @screen max-lg {
+      padding: 50px 16px 16px;
+    }
+  }
+  &__item:hover &__item-details {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+  &__item-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 8px;
+    height: 26px;
+    align-items: center;
+    border-radius: 100px;
+    background-color: #fff;
+    color: #030a1b;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    // @container item (max-width: $item-bp) {
+    @screen max-lg {
+      top: 16px;
+      left: 16px;
+      height: 24px;
+      font-size: 13px;
+    }
+  }
+  &__item-caption {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+
+    // @container item (max-width: $item-bp) {
+    @screen max-lg {
+      font-size: 14px;
+    }
+
+    p {
+      @apply line-clamp-3;
+      font-size: inherit;
+      line-height: inherit;
+      margin: 0 0 24px;
+      max-width: 48ch;
+    }
+    time {
     }
   }
   &__pager {
@@ -109,14 +162,25 @@ $condition: (
 
     @screen max-md {
       width: 100%;
-      min-height: 37px;
-      border: 1px solid #ffcc48;
-      background-color: #ffffff;
+    }
+  }
 
-      &:hover {
-        background-color: #ffcc48;
-        border-color: #ffcc48;
-      }
+  &__pagination {
+    display: flex;
+  }
+  &__pagination-item {
+    & + & {
+      margin-left: 16px;
+    }
+
+    &.current {
+      border-color: #030a1b;
+      cursor: default;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
     }
   }
 }

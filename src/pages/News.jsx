@@ -16,8 +16,13 @@ export default function NewsPage() {
               <h1 class="woocommerce-products-header__title page-title">
                 Новости VozWooden
               </h1>
-              <SiteButton variant="quaternary" size="xl" type="button">
-                <EmailIcon style="margin-right: 10px" />
+              <SiteButton
+                type="button"
+                variant="quaternary"
+                size="xl"
+                className="max-md:site-button_md"
+              >
+                <EmailIcon class="mr-2.5 max-md:hidden" />
                 Подпишись
               </SiteButton>
             </div>

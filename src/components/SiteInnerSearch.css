@@ -1,13 +1,19 @@
 .site-inner-search {
   margin-left: 12px;
   min-width: 0;
+  scroll-snap-align: center;
 
   &__form {
     position: relative;
     width: 308px;
     max-width: 100%;
+    min-width: 120px;
     height: 36px;
+    display: none;
 
+    @screen md {
+      display: block !important;
+    }
     @screen max-md {
       position: absolute;
       top: 0;
@@ -16,6 +22,9 @@
       background-color: white;
       display: none;
     }
+  }
+  &_open &__form {
+    display: block;
   }
   &__input {
     box-sizing: border-box;
@@ -117,23 +126,8 @@
   }
 
   &__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 36px;
-    width: 36px;
-    border: 1px solid #d8d8d8;
-    background-color: #ffffff;
-    border-radius: 50%;
-    color: #000000;
-    cursor: pointer;
-
     @screen md {
       display: none;
     }
-  }
-  &__trigger-icon {
-    height: 16px;
-    fill: currentColor;
   }
 }

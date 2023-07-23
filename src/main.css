@@ -2,7 +2,7 @@
   display: flex;
   // flex-wrap: wrap;
   align-items: center;
-  gap: 16px 32px;
+  // gap: 16px 32px;
   margin-bottom: 34px;
 
   @screen max-lg {
@@ -10,29 +10,19 @@
   }
 
   @screen max-sm {
-    gap: 8px 24px;
+    // gap: 8px 24px;
     margin-bottom: 24px;
   }
 
   .woocommerce-products-header__title {
     padding-bottom: 0;
     margin-bottom: 0;
+    margin-right: 32px;
+    line-height: normal;
 
     @screen max-sm {
+      margin-right: 24px;
       font-size: 20px;
-    }
-  }
-
-  .site-button {
-    @screen max-sm {
-      min-height: 38px;
-      padding: 4px 12px;
-    }
-
-    svg {
-      @screen max-md {
-        display: none;
-      }
     }
   }
 }
@@ -66,10 +56,16 @@
       border-color: #030a1b;
     }
   }
+  &_septenary {
+    background-color: #ffffff;
+    border: 1px solid #ffcc48;
 
+    &:hover {
+      background-color: #ffcc48;
+    }
+  }
   // quaternary, quinary, senary, septenary, octonary, nonary, denary
-
-  &_pill {
+  &_tab {
     font-size: 13px;
     font-weight: 400;
     color: #030a1b;
@@ -77,14 +73,36 @@
     border: 1px solid #d8d8d8;
     height: 36px;
     padding: 4px 12px;
-    border-radius: 36px;
+    border-radius: 100px;
+    white-space: nowrap;
 
-    @screen max-md {
-      font-size: 12px;
+    &:not(.active):hover {
+      color: rgba(3, 10, 27, 0.5);
     }
 
+    &.active {
+      border-color: #ddeafb;
+      background-color: #ddeafb;
+    }
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+  &_pill {
+    font-size: 14px;
+    font-weight: 400;
+    color: #030a1b;
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+    height: 36px;
+    padding: 4px 14px;
+    border-radius: 100px;
+
     &:hover {
-      color: rgba(3, 10, 27, 0.5);
+      background-color: #ffffff;
+      border-color: #030a1b;
     }
 
     svg {
@@ -107,10 +125,36 @@
     font-size: 16px;
   }
 
+  &_icon {
+    @supports (aspect-ratio: 1) {
+      padding: 0;
+      aspect-ratio: 1;
+    }
+  }
+
   svg {
-    fill: currentColor;
+    color: black;
     flex-shrink: 0;
   }
 }
 
-@tailwind utilities;
+@screen max-md {
+  .max-md\:site-button_md {
+    min-height: 38px;
+    padding: 4px 12px;
+  }
+  .max-md\:site-button_icon {
+    @supports (aspect-ratio: 1) {
+      padding: 0;
+      aspect-ratio: 1;
+    }
+  }
+  .max-md\:site-button_septenary {
+    background-color: #ffffff;
+    border: 1px solid #ffcc48;
+
+    &:hover {
+      background-color: #ffcc48;
+    }
+  }
+}

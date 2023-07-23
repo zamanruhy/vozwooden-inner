@@ -51,12 +51,12 @@
     }
   }
 
-  &_sm {
-    min-height: 33px;
-    padding: 4px 12px;
-  }
   &_md {
     min-height: 38px;
+    padding: 4px 12px;
+  }
+  &_sm {
+    min-height: 33px;
     padding: 4px 12px;
   }
 

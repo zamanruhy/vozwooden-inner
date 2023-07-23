@@ -8,12 +8,16 @@ export default function SiteMeta() {
   return (
     <div class="site-meta">
       <time class="site-meta__date">23 мая 2023</time>
-      <SiteButton as="a" href="news" variant="pill">
+      <SiteButton as="a" href="news" variant="tab">
         Все новости
       </SiteButton>
-      <SiteButton variant="pill" type="button" className="site-meta__share">
+      <SiteButton
+        type="button"
+        variant="pill"
+        className="site-meta__share max-md:site-button_icon"
+      >
         <ShareIcon />
-        <span>Поделиться</span>
+        <span class="ml-2.5 max-md:hidden">Поделиться</span>
       </SiteButton>
     </div>
   )

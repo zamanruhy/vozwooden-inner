@@ -1,21 +1,28 @@
+import SiteButton from './SiteButton'
 import './SiteNavTabs.css'
 
 const tabs = [
-  { name: 'Все новости', active: true },
-  { name: 'Конкурс', active: false },
-  { name: 'Новинка', active: false },
-  { name: 'Соревнование', active: false }
+  { name: 'Все новости' },
+  { name: 'Конкурс' },
+  { name: 'Новинка' },
+  { name: 'Соревнование' }
 ]
 
 export default function SiteNavTabs() {
   return (
     <nav class="site-nav-tabs">
-      <ul>
-        {tabs.map(({ name, active }) => (
-          <li>
-            <a href="#" classList={{ active: active }}>
+      <ul class="site-nav-tabs__list">
+        {tabs.map(({ name }, i) => (
+          <li className="site-nav-tabs__item">
+            <SiteButton
+              as="a"
+              href="#"
+              variant="tab"
+              className="site-nav-tabs__tab"
+              classList={{ active: i === 0 }}
+            >
               {name}
-            </a>
+            </SiteButton>
           </li>
         ))}
       </ul>

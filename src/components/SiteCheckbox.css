@@ -54,7 +54,7 @@
     font-weight: 400;
     line-height: normal;
   }
-  &_ghost &__box {
+  &_ghost &__label {
     color: #ffffff;
   }
 }

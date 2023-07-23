@@ -30,27 +30,14 @@
   &__date {
   }
   &__share {
-    padding-left: 14px;
-    padding-right: 14px;
     margin-left: auto;
 
-    @screen max-md {
-      padding: 0;
-      width: 36px;
-    }
+    // span {
+    //   margin-left: 10px;
 
-    svg {
-      @screen max-md {
-        position: relative;
-        left: -1px;
-      }
-    }
-    span {
-      margin-left: 10px;
-
-      @screen max-md {
-        display: none;
-      }
-    }
+    //   @screen max-md {
+    //     display: none;
+    //   }
+    // }
   }
 }
