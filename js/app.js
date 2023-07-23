@@ -6,6 +6,7 @@ const SiteInnerSearch = "";
 const SiteSummary = "";
 const SiteMeta = "";
 const SiteHero = "";
+const SiteShare = "";
 const SiteTestimonials = "";
 const SiteRelated = "";
 const SiteNewsArticle = "";
@@ -26,5 +27,20 @@ const utilities = "";
   });
   $close.on("click", function(e) {
     $search.removeClass("site-inner-search_open");
+  });
+})();
+(function() {
+  var $ = window.jQuery;
+  var $shares = $(".site-meta__share, .site-share__button");
+  $shares.on("click", async () => {
+    try {
+      await navigator.share({
+        title: document.title,
+        text: document.querySelector("meta[name='description']").content,
+        url: window.location.href
+      });
+    } catch (err) {
+      console.log(err);
+    }
   });
 })();
