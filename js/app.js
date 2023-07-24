@@ -15,6 +15,7 @@ const SiteAbout = "";
 const SiteCheckbox = "";
 const SiteInput = "";
 const SiteFeedback = "";
+const SiteHistory = "";
 const utilities = "";
 (function() {
   var $ = window.jQuery;
