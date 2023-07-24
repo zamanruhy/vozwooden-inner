@@ -28,6 +28,7 @@
     "ghpages": "deploy.sh"
   },
   "dependencies": {
+    "embla-carousel": "8.0.0-rc11",
     "solid-js": "^1.5.3"
   },
   "devDependencies": {

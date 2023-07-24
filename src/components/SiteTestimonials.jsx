@@ -58,7 +58,6 @@ export default function SiteTestimonials() {
             <span>Предыдущая</span>
           </div>
           <div className="site-testimonials__nav-right">
-            <span>Следующая</span>
             <SiteButton
               icon
               type="button"
@@ -68,6 +67,7 @@ export default function SiteTestimonials() {
             >
               <NextIcon />
             </SiteButton>
+            <span>Следующая</span>
           </div>
         </div>
       </div>

@@ -117,11 +117,17 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+    user-select: none;
   }
   &__nav-left,
   &__nav-right {
     display: flex;
     align-items: center;
+
+    &:has(:disabled) {
+      opacity: 0.5;
+      pointer-events: none;
+    }
 
     span {
       @screen max-lg {
@@ -143,11 +149,17 @@
 
     span {
       margin-right: 16px;
+      order: -1;
     }
   }
   &__prev,
   &__next {
     border-radius: 50%;
+
+    // &:disabled {
+    //   opacity: 0.5;
+    //   pointer-events: none;
+    // }
 
     @screen max-md {
       min-height: 36px;

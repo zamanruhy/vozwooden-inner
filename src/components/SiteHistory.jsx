@@ -27,7 +27,9 @@ export default function SiteHistory() {
           <div className="site-history__nav">
             <div className="site-history__nav-container">
               {Array.from({ length }).map((_, i) => (
-                <div class="site-history__nav-year">{2015 + i}</div>
+                <button type="button" class="site-history__nav-year">
+                  {2015 + i}
+                </button>
               ))}
             </div>
           </div>

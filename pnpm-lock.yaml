@@ -9,6 +9,7 @@ importers:
       '@typescript-eslint/parser': ^5.36.1
       '@vitejs/plugin-legacy': ^2.0.1
       autoprefixer: ^10.4.8
+      embla-carousel: 8.0.0-rc11
       eslint: ^8.22.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-compat: ^4.0.2
@@ -36,6 +37,7 @@ importers:
       vite-plugin-solid: ^2.3.0
       vite-plugin-solid-svg: ^0.4.1
     dependencies:
+      embla-carousel: 8.0.0-rc11
       solid-js: 1.5.3
     devDependencies:
       '@solidjs/router': 0.4.2_solid-js@1.5.3
@@ -1257,6 +1259,10 @@ packages:
   /electron-to-chromium/1.4.224:
     resolution: {integrity: sha512-dOujC5Yzj0nOVE23iD5HKqrRSDj2SD7RazpZS/b/WX85MtO6/LzKDF4TlYZTBteB+7fvSg5JpWh0sN7fImNF8w==}
     dev: true
+
+  /embla-carousel/8.0.0-rc11:
+    resolution: {integrity: sha512-Toeaug98PGYzSY56p/xsa+u4zbQbAXgGymwEDUc2wqT+1XCnnUsH42MClglhABJQbobwDYxOabhJrfXyJKUMig==}
+    dev: false
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
