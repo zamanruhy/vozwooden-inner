@@ -4,12 +4,13 @@ import SiteHero from './SiteHero'
 import heroImg from '../images/about-hero.jpg?jpg'
 import oneImg from '../images/news-article-1.jpg?jpg'
 import twoImg from '../images/news-article-2.jpg?jpg'
-import threeImg from '../images/news-article-3.jpg?jpg'
+// import threeImg from '../images/news-article-3.jpg?jpg'
 import personImg from '../images/about-person.jpg?jpg'
 
 import './SiteAbout.css'
 import SiteButton from './SiteButton'
 import SiteFeedback from './SiteFeedback'
+import SiteHistory from './SiteHistory'
 
 export default function SiteAbout() {
   return (
@@ -56,6 +57,14 @@ export default function SiteAbout() {
           </div>
         </figure>
       </div>
+
+      <div className="site-about__content">
+        <h2>
+          История <br />
+          Vozwooden
+        </h2>
+      </div>
+      <SiteHistory />
 
       <div className="site-about__content">
         <h2>Vozwooden - это</h2>

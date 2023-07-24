@@ -1,6 +1,6 @@
-import Image from './Image'
 import SiteSubs from './SiteSubs'
 import SiteButton from './SiteButton'
+import SiteNewsItem from './SiteNewsItem'
 
 import news1Img from '../images/news-item-1.jpg?jpg'
 import news2Img from '../images/news-item-2.jpg?jpg'
@@ -26,22 +26,10 @@ export default function SiteNews() {
   return (
     <div class="site-news">
       <div className="site-news__wrapper">
-        <div className="site-news__items">
+        <div className="site-news__list">
           {news.map(({ src }) => (
-            <div className="site-news__item">
-              <div className="site-news__item-details">
-                <a href="news-article" className="site-news__item-button">
-                  Новость
-                </a>
-                <div className="site-news__item-caption">
-                  <p>
-                    Текст новости в одну, две или три строки с кнопкой перехода
-                    в полную новость
-                  </p>
-                  <time>23 мая 2023</time>
-                </div>
-              </div>
-              <Image src={src} alt="#" />
+            <div className="site-news__block">
+              <SiteNewsItem src={src} />
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
-import Image from './Image'
 import SiteButton from './SiteButton'
+import SiteNewsItem from './SiteNewsItem'
 
 import news1Img from '../images/news-item-1.jpg?jpg'
 import news2Img from '../images/news-item-2.jpg?jpg'
@@ -29,9 +29,9 @@ export default function SiteRelated() {
       <div className="site-related__wrapper">
         <div className="site-related__viewport">
           <div className="site-related__container">
-            {news.map(({ src, href }) => (
-              <div className="site-related__item">
-                <Image src={src} alt="#" />
+            {news.map(({ src }) => (
+              <div className="site-related__slide">
+                <SiteNewsItem src={src} />
               </div>
             ))}
           </div>
@@ -46,7 +46,6 @@ export default function SiteRelated() {
           >
             <PrevIcon />
           </SiteButton>
-
           <SiteButton
             icon
             type="button"

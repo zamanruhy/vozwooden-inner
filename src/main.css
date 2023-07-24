@@ -64,6 +64,14 @@
       background-color: #ffcc48;
     }
   }
+  &_ghost {
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-color: #030a1b;
+    }
+  }
   // quaternary, quinary, senary, septenary, octonary, nonary, denary
   &_tab {
     font-size: 13px;
